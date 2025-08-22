@@ -1,6 +1,5 @@
 { lib
 , rustPlatform
-, CoreFoundation
 }:
 
 let
@@ -9,8 +8,6 @@ in
 rustPlatform.buildRustPackage {
   pname = "mkalias";
   version = info.package.version;
-
-  buildInputs = [ CoreFoundation ];
 
   src = builtins.path { name = "mkalias"; path = ./.; };
 
